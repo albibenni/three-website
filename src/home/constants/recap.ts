@@ -19,7 +19,7 @@ import {
   intesa,
   forge,
   java,
-  treeWebsite,
+  threeWebsite,
   coverage,
   exLibris,
 } from '../assets';
@@ -223,12 +223,16 @@ const projects: Project[] = [
         color: 'blue-text-gradient',
       },
       {
+        name: 'vite',
+        color: 'yellow-text-gradient',
+      },
+      {
         name: 'tailwind',
         color: 'pink-text-gradient',
       },
     ],
-    image: treeWebsite,
-    source_code_link: 'https://github.com/albibenni/tree-js-website',
+    image: threeWebsite,
+    source_code_link: 'https://github.com/albibenni/three-website',
   },
   {
     name: 'ExLibris',
