@@ -20,8 +20,6 @@ export default function Contact() {
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    console.log(pKey);
-    console.log(serviceId);
     setLoading(true);
     // eslint-disable-next-line import/no-named-as-default-member
     emailjs
