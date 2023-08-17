@@ -14,17 +14,20 @@ export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState<Form>({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const pKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
+    console.log(pKey);
+    console.log(serviceId);
     setLoading(true);
     // eslint-disable-next-line import/no-named-as-default-member
     emailjs
       .send(
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         {
           from_name: form.name,
           to_name: 'JavaScript Mastery',
@@ -32,7 +35,7 @@ export default function Contact() {
           to_email: 'sujata@jsmastery.pro',
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        pKey
       )
       .then(
         () => {
