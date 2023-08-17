@@ -8,7 +8,7 @@ export default function About() {
   const blockOfText =
     "I'm a software engineer with experience in TypeScript,\n" +
     '          JavaScript and Java and expertise in frameworks like React, Node.js, and\n' +
-    "          Spring. I'm a quick learner and I enjoy learning new thing to improve my abilities.";
+    "          Spring. I'm a quick learner and I enjoy learning new things to improve my abilities.";
   const workTogether = `Let's work together to bring your ideas to life!`;
   return (
     <div>
