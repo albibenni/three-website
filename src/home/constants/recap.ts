@@ -230,6 +230,10 @@ const projects: Project[] = [
         name: 'tailwind',
         color: 'pink-text-gradient',
       },
+      {
+        name: 'treejs',
+        color: 'green-text-gradient',
+      },
     ],
     image: threeWebsite,
     source_code_link: 'https://github.com/albibenni/three-website',
