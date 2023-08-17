@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import { textVariant } from '../utils/motion.ts';
 import { styles } from '../../styles.ts';
-import { VerticalTimeline } from 'react-vertical-timeline-component';
 import { experiences } from '../constants/recap.ts';
 import ExperienceCard from './ExperienceCard.tsx';
+import { VerticalTimeline } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 export default function Experience() {
   const subText = "What I've done so far";

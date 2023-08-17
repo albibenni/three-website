@@ -1,5 +1,6 @@
 import { Experience } from '../constants/recap.ts';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 interface ExperienceCardProps {
   experience: Experience;
