@@ -6,9 +6,7 @@ import Projects from './components/Projects.tsx';
 import Contact from './components/Contact.tsx';
 import StarsCanvas from './components/canvas/StarsCanvas.tsx';
 import Navbar from './components/Navbar.tsx';
-import { staggerContainer } from './utils/motion.ts';
-import { styles } from '../styles.ts';
-import { motion } from 'framer-motion';
+import SectionWrapper from './components/SectionWrapper.tsx';
 
 export default function Home() {
   return (
@@ -17,14 +15,7 @@ export default function Home() {
         <Navbar />
         <Hero />
       </div>
-      {/*<SectionWrapper>*/}
-      <motion.section
-        variants={staggerContainer(0, 0)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
-      >
+      <SectionWrapper>
         <About />
         <Experience />
         <Tech />
@@ -33,9 +24,7 @@ export default function Home() {
           <Contact />
           <StarsCanvas />
         </div>
-      </motion.section>
-
-      {/*</SectionWrapper>*/}
+      </SectionWrapper>
     </div>
   );
 }
